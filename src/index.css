@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  font-family: 'VT323', monospace;
+  background-color: #02040a; /* Deep abyss blue/black */
+  color: #00ffcc;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Beautiful CRT Overlay - subtle so it doesn't ruin the 3D */
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+  z-index: 50;
+  background-size: 100% 3px;
+  pointer-events: none;
+}
+
+/* High-end Neon Glass styling */
+.glass-panel {
+  background: rgba(5, 10, 20, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 204, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 255, 204, 0.05);
+}
+
+.glass-panel:hover {
+  border: 1px solid rgba(0, 255, 204, 0.6);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2), inset 0 0 10px rgba(0, 255, 204, 0.1);
+}
+
+.glass-panel-purple:hover {
+  border: 1px solid rgba(170, 0, 255, 0.6);
+  box-shadow: 0 0 20px rgba(170, 0, 255, 0.2), inset 0 0 10px rgba(170, 0, 255, 0.1);
+}
